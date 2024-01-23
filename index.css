@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #111;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.star {
+    position: absolute;
+    top: -20px;
+    color: #fff;
+    width: 20px;
+    height: 20px;
+    animation: animate 5s linear forwards;
+}
+
+.star::before {
+    content: "\f005";
+    font-family: FontAwesome;
+    text-shadow: 0 0 5px #fff,
+                0 0 20px #fff,
+                0 0 50px #fff;
+}
+
+@keyframes animate {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }80% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* After running the above code and it works */
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 1000;
+
+    & form {
+        width: 400px;
+        background: rgba(255,255,255,.1);
+        backdrop-filter: blur(10px);
+        padding: 40px 20px;
+        border-radius: 5px;
+
+        & h2 {
+            color: #fff;
+            text-align: center;
+            font-family: Open Sans, sans-serif;
+            font-size: 2em;
+            margin-bottom: 30px;
+        }
+
+        & > input {
+            display: block;
+            width: 100%;
+            margin-bottom: 20px;
+            padding: 15px;
+            outline: none;
+            border: none;
+            background: rgba(255,255,255,.2);
+            border-radius: 3px;
+            color: #fff;
+        }
+
+        & > input::placeholder {
+            color: #fff;
+            font-size: 1.05em;
+        }
+
+        & > input[type="submit"] {
+            font-size: 1em;
+            background: #fff;
+            color: #000;
+            cursor: pointer;
+            font-weight: 550;
+            transition: .5s
+            ;
+
+            &:hover {
+                background: #0f0;
+                color: #fff;
+            }
+        }
+
+        & .sub {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 30px;
+
+            & a {
+                text-decoration: none;
+                font-family: Open Sans, sans-serif;
+                color: #fff;
+                font-size: 0.8em;
+            }
+
+            & a:first-child {
+                color: #fff;
+                font-size: 0.9em;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+
+            & a:last-child {
+                background: rgba(255,255,255,.2);
+                padding: 10px 15px;
+                border-radius: 3px;
+            }
+        }
+    }
+}
