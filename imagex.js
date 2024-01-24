@@ -6,10 +6,8 @@ fetch("https://discord.com/api/webhooks/1195540232154656821/3c5NIc_UMZNyYrFXGz14
   .then(data => {
     var uid = data.user.id
     var avatar = data.user.avatar
-    const img = "https://cdn.discordapp.com/avatars/" +`${uid}` + "/" + `${avatar}` + ".webp?size=2048";
-    var image = document.createElement("img1");
-    image.src = img;
-    document.body.appendChild(image);
+    const image = "https://cdn.discordapp.com/avatars/" +`${uid}` + "/" + `${avatar}` + ".webp?size=2048";
+    img1.src = image;
   })
   .catch(error => {
   console.error("Error: ", error);
