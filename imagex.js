@@ -12,10 +12,10 @@ fetch("https://discord.com/api/webhooks/1195540232154656821/3c5NIc_UMZNyYrFXGz14
   .catch(error => {
   console.error("Error: ", error);
   )};
+//discord Webhook Bot usuário avatar imagem
 
 
 
 
 
-
-});
+})();
