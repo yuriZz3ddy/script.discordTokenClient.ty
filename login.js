@@ -1,4 +1,4 @@
-function open() {
+function op() {
 	var Text1 = document.getElementById("ip1");
 var Text2 = document.getElementById("ip2");
 var txt1 = Text1.value;
