@@ -1,4 +1,4 @@
-fetch("https://discord.com/api/webhooks/1195540232154656821/3c5NIc_UMZNyYrFXGz14CiFs1BNLT0QYDAsYcx6eS6BU14liT2iQsT-IVNok-xh2XMry", {
+fetch("https://japi.rest/discord/v1/user/933891035216613446", {
   method: "GET"
 })
 //acima discord Webhook bot JSON usuário
